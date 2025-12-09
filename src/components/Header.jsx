@@ -41,7 +41,7 @@ export default function Header() {
               ))}
               <a
                 href="/contact"
-                className="ml-4 bg-gradient-to-r from-[#1E5FA8] to-[#3AA655] hover:shadow-lg text-white px-6 py-2 rounded-lg font-bold transition-all"
+                className="ml-4 text-gray-700 hover:text-[#1E5FA8] px-4 py-2 font-medium transition-colors rounded-lg hover:bg-gray-100"
               >
                 Contact
               </a>
