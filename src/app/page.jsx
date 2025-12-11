@@ -261,7 +261,7 @@ export default function Home() {
       </section>
 
       {/* Services Section with Segments */}
-      <section className="py-32 px-4 bg-gradient-to-b from-[#F5E6D3] to-white relative overflow-hidden">
+      <section className="py-8 md:py-32 px-4 bg-gradient-to-b from-[#F5E6D3] to-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#E6C34A]/10 rounded-full blur-3xl"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20">
@@ -279,7 +279,7 @@ export default function Home() {
           {/* Énergies Fossiles Segment */}
           <div className="mb-24">
             {/* Intro avec image */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 bg-gradient-to-br from-[#F5F9FF] to-white rounded-3xl p-12 md:p-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-20 bg-gradient-to-br from-[#F5F9FF] to-white rounded-3xl p-2 lg:p-16">
               <div className="order-2 md:order-1">
                 <div className="inline-block mb-6 px-4 py-2 bg-blue-100 rounded-full">
                   <span className="text-[#1E5FA8] font-bold text-xs uppercase tracking-widest">⛽ Énergies Fossiles</span>
@@ -289,7 +289,7 @@ export default function Home() {
                   Nous fournissons des carburants de haute qualité, des services de livraison mobile et des solutions d'importation certifiées internationalement. Disponibles partout au Tchad avec un service fiable et professionnel.
                 </p>
               </div>
-              <img src={"/h7.jpg"} alt="Énergies Fossiles" className="order-1 md:order-2 rounded-3xl shadow-2xl w-full h-[500px] object-cover" />
+              <img src={"/h8.jpg"} alt="Énergies Fossiles" className="order-1 md:order-2 rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
             </div>
 
             <div className="flex items-center space-x-3 mb-8">
@@ -297,7 +297,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-[#1E5FA8]">Nos Services</h3>
               <div className="flex-1 h-1 bg-gradient-to-r from-[#1E5FA8] to-transparent rounded-full"></div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-6">
               {services.filter(s => s.segment === "Énergies Fossiles").map((service, idx) => {
                 const ServiceIcon = service.icon;
                 return (
@@ -330,8 +330,8 @@ export default function Home() {
           {/* Énergies Renouvelables Segment */}
           <div className="mb-24">
             {/* Intro avec image */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 bg-gradient-to-br from-[#F0F8E8] to-white rounded-3xl p-12 md:p-16">
-              <img src={"/h8.jpg"} alt="Énergies Renouvelables" className="rounded-3xl shadow-2xl w-full h-[500px] object-cover" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-8 md:mb-20 bg-gradient-to-br from-[#F0F8E8] to-white rounded-3xl p-2 lg:p-16">
+              <img src={"/h7.jpg"} alt="Énergies Renouvelables" className="rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
               <div>
                 <div className="inline-block mb-6 px-4 py-2 bg-green-100 rounded-full">
                   <span className="text-[#3AA655] font-bold text-xs uppercase tracking-widest">🌱 Énergies Renouvelables</span>
@@ -348,7 +348,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-[#3AA655]">Nos Services</h3>
               <div className="flex-1 h-1 bg-gradient-to-r from-[#3AA655] to-transparent rounded-full"></div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-6">
               {services.filter(s => s.segment === "Énergies Renouvelables").map((service, idx) => {
                 const ServiceIcon = service.icon;
                 return (
@@ -381,7 +381,7 @@ export default function Home() {
           {/* Services Complémentaires Segment */}
           <div className="mb-16">
             {/* Intro avec image */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 bg-gradient-to-br from-[#FEF9E8] to-white rounded-3xl p-12 md:p-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-20 bg-gradient-to-br from-[#FEF9E8] to-white rounded-3xl p-2 lg:p-16">
               <div className="order-2 md:order-1">
                 <div className="inline-block mb-6 px-4 py-2 bg-yellow-100 rounded-full">
                   <span className="text-[#E6C34A] font-bold text-xs uppercase tracking-widest">🛠️ Services Complémentaires</span>
@@ -391,7 +391,7 @@ export default function Home() {
                   Complétez votre expérience EnerTchad avec nos services : maintenance automobile professionnelle, laverie écologique haute technologie et gestion responsable des déchets pour un Tchad plus vert.
                 </p>
               </div>
-              <img src={carWashImage} alt="Services Complémentaires" className="order-1 md:order-2 rounded-3xl shadow-2xl w-full h-[500px] object-cover" />
+              <img src={carWashImage} alt="Services Complémentaires" className="order-1 md:order-2 rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
             </div>
 
             <div className="flex items-center space-x-3 mb-8">
@@ -399,7 +399,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-[#E6C34A]">Nos Services</h3>
               <div className="flex-1 h-1 bg-gradient-to-r from-[#E6C34A] to-transparent rounded-full"></div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-6">
               {services.filter(s => s.segment === "Services Complémentaires").map((service, idx) => {
                 const ServiceIcon = service.icon;
                 return (
@@ -437,11 +437,11 @@ export default function Home() {
       </section>
 
       {/* Assistance Technique Section */}
-      <section className="py-32 px-4 bg-gradient-to-b from-white via-[#F5F9FF] to-[#F0F8E8]">
+      <section className="py-8 md:py-32 px-4 bg-gradient-to-b from-white via-[#F5F9FF] to-[#F0F8E8]">
         <div className="max-w-7xl mx-auto">
           {/* Intro avec image */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 bg-gradient-to-br from-[#FEF9E8] to-white rounded-3xl p-12 md:p-16">
-            <img src={"/h9.webp"} alt="Assistance Technique" className="rounded-3xl shadow-2xl w-full h-[500px] object-cover" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-8 md:mb-20 bg-gradient-to-br from-[#FEF9E8] to-white rounded-3xl p-2 lg:p-16">
+            <img src={"/h9.webp"} alt="Assistance Technique" className="rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
             <div>
               <div className="inline-block mb-6 px-4 py-2 bg-yellow-100 rounded-full">
                 <span className="text-[#E6C34A] font-bold text-xs uppercase tracking-widest">📞 Assistance Technique 24/7</span>
@@ -486,8 +486,8 @@ export default function Home() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-16">
+            <div className="bg-white rounded-2xl p-4 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-gradient-to-br from-[#E6C34A] to-[#d4a028] rounded-xl flex items-center justify-center mb-6">
                 <Clock className="w-7 h-7 text-white" />
               </div>
@@ -497,7 +497,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <div className="bg-white rounded-2xl p-4 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-gradient-to-br from-[#E6C34A] to-[#d4a028] rounded-xl flex items-center justify-center mb-6">
                 <Award className="w-7 h-7 text-white" />
               </div>
@@ -507,7 +507,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <div className="bg-white rounded-2xl p-4 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-gradient-to-br from-[#E6C34A] to-[#d4a028] rounded-xl flex items-center justify-center mb-6">
                 <Shield className="w-7 h-7 text-white" />
               </div>
