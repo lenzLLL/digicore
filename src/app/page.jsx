@@ -495,24 +495,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* EV Charging Network Promo */}
-      <section className="py-20 px-4 bg-gradient-to-r from-[#F5F9FF] to-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-4xl font-bold text-[#1E5FA8] mb-4">Roulez électrique, nous couvrons la distance.</h3>
-            <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-              EnerTchad déploie le premier réseau de bornes de recharge pour voitures électriques au Tchad, avec une station tous les 100 km pour vous garantir liberté et confort sur toutes vos routes. Que vous traversiez le pays pour les affaires ou les loisirs, vous trouvez toujours un point de recharge fiable, sécurisé et simple d’utilisation. Nos bornes sont adaptées aux réalités du terrain tchadien et permettent une recharge rapide afin de vous faire gagner du temps. Avec EnerTchad, choisir la voiture électrique n’est plus un risque, c’est un avantage : économies de carburant, moins de pollution et une expérience de conduite moderne, à la hauteur d’un Tchad tourné vers l’avenir.
-            </p>
-            <a
-              href="/services"
-              className="inline-block bg-[#E6C34A] text-[#1E5FA8] px-6 py-3 rounded-lg font-bold hover:bg-[#d4a028] transition-all"
-            >
-              En savoir plus
-            </a>
-          </div>
-          <img src={evChargerImage} alt="Réseau de bornes EnerTchad" className="rounded-2xl shadow-2xl w-full" />
-        </div>
-      </section>
+      <Promo
+        title="Roulez électrique, nous couvrons la distance."
+        description={`EnerTchad déploie le premier réseau de bornes de recharge pour voitures électriques au Tchad, avec une station tous les 100 km pour vous garantir liberté et confort sur toutes vos routes. Que vous traversiez le pays pour les affaires ou les loisirs, vous trouvez toujours un point de recharge fiable, sécurisé et simple d’utilisation. Nos bornes sont adaptées aux réalités du terrain tchadien et permettent une recharge rapide afin de vous faire gagner du temps. Avec EnerTchad, choisir la voiture électrique n’est plus un risque, c’est un avantage : économies de carburant, moins de pollution et une expérience de conduite moderne, à la hauteur d’un Tchad tourné vers l’avenir.`}
+        bullets={[
+          "Station tous les 100 km",
+          "Recharge rapide et sécurisée",
+          "Compatibilité multi-normes",
+          "Maintenance locale et support",
+        ]}
+        imageSrc={evChargerImage}
+        imageAlt="Réseau de bornes EnerTchad"
+        imageLeft={false}
+        ctaText="En savoir plus"
+        ctaHref="/services"
+        wrapperClass="bg-gradient-to-r from-[#F5F9FF] to-white md:py-28"
+        imageClass="rounded-2xl shadow-2xl w-full h-96 md:h-[560px] object-cover"
+        titleClass="text-4xl md:text-6xl"
+        descriptionClass="text-lg md:text-xl text-gray-700"
+        ctaClass="inline-block bg-[#E6C34A] text-[#1E5FA8] px-8 py-4 rounded-lg font-bold hover:bg-[#d4a028] transition-all text-lg"
+      />
 
       <Promo
         title="Zone de co-working pendant la charge"
@@ -523,12 +525,16 @@ export default function Home() {
           "Boissons et encas disponibles",
           "Ambiance calme et sécurisée",
         ]}
-        imageSrc={stationInterior}
+        imageSrc={"/h6.png"}
         imageAlt="Zone de co-working"
         imageLeft={false}
         ctaText="Voir les stations"
         ctaHref="/services"
-        wrapperClass="bg-white"
+        wrapperClass="bg-gradient-to-r from-[#F7FBFF] to-white md:py-28"
+        imageClass="rounded-2xl shadow-2xl w-full h-96 md:h-[560px] object-cover"
+        titleClass="text-4xl md:text-6xl"
+        descriptionClass="text-lg md:text-xl text-gray-700"
+        ctaClass="inline-block bg-[#1E5FA8] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#164a8a] transition-all text-lg"
       />
 
       <Promo
@@ -545,7 +551,11 @@ export default function Home() {
         imageLeft={true}
         ctaText="Découvrir la mobilité"
         ctaHref="/services"
-        wrapperClass="bg-gradient-to-r from-[#F5F9FF] to-white"
+        wrapperClass="bg-gradient-to-r from-[#F5F9FF] to-white md:py-28"
+        imageClass="rounded-2xl shadow-2xl w-full h-96 md:h-[560px] object-cover"
+        titleClass="text-4xl md:text-6xl"
+        descriptionClass="text-lg md:text-xl text-gray-700"
+        ctaClass="inline-block bg-[#1E5FA8] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#164a8a] transition-all text-lg"
       />
 
       {/* Features Section */}

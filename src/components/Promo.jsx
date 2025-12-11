@@ -13,6 +13,9 @@ export default function Promo({
   ctaHref = "/services",
   wrapperClass = "bg-white",
   imageClass = "rounded-2xl shadow-2xl w-full h-72 object-cover",
+  titleClass = "text-3xl md:text-4xl",
+  descriptionClass = "text-gray-700",
+  ctaClass = "inline-block bg-[#E6C34A] text-[#1E5FA8] px-6 py-3 rounded-lg font-bold hover:bg-[#d4a028] transition-all",
 }) {
   return (
     <section className={`py-16 px-4 ${wrapperClass}`}>
@@ -24,8 +27,8 @@ export default function Promo({
         )}
 
         <div>
-          <h3 className="text-3xl md:text-4xl font-bold text-[#1E5FA8] mb-4">{title}</h3>
-          <p className="text-gray-700 mb-4 leading-relaxed">{description}</p>
+          <h3 className={`${titleClass} font-bold text-[#1E5FA8] mb-4`}>{title}</h3>
+          <p className={`${descriptionClass} mb-4 leading-relaxed`}>{description}</p>
 
           {bullets.length > 0 && (
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
@@ -37,7 +40,7 @@ export default function Promo({
 
           <a
             href={ctaHref}
-            className="inline-block bg-[#E6C34A] text-[#1E5FA8] px-6 py-3 rounded-lg font-bold hover:bg-[#d4a028] transition-all"
+            className={ctaClass}
           >
             {ctaText}
           </a>
