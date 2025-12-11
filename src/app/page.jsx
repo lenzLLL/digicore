@@ -195,7 +195,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
         <img
-          src={"/h5.png"}
+          src={"/h10.jpg"}
           alt="EnerTchad"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -530,9 +530,9 @@ export default function Home() {
                 alt="Station moderne"
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-[#E6C34A] p-6 rounded-xl shadow-xl">
-                <div className="text-4xl font-bold text-[#1E5FA8]">15+</div>
-                <div className="text-sm text-[#1E5FA8] font-semibold">
+              <div className="absolute -bottom-6 -right-6 bg-[#E6C34A] p-3 md:p-6 rounded-xl shadow-xl w-24 md:w-auto">
+                <div className="text-2xl md:text-4xl font-bold text-[#1E5FA8]">15+</div>
+                <div className="text-xs md:text-sm text-[#1E5FA8] font-semibold leading-tight">
                   Années d'excellence
                 </div>
               </div>
