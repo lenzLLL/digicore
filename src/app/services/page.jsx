@@ -11,6 +11,7 @@ import {
   MapPin,
   Shield,
   Zap as Lightning,
+  TrendingUp,
   Truck,
   Headset,
   Recycle,
@@ -55,28 +56,46 @@ export default function Services() {
         "Importation et distribution de carburant de qualité certifiée internationalement",
     },
     {
-      icon: Leaf,
-      title: "Énergie Solaire",
+      icon: Fuel,
+      title: "Carburants Routiers",
       description:
-        "Solutions d'énergie renouvelable pour particuliers et entreprises. Installation et maintenance complètes.",
+        "Essence (SP95, SP98, E10, E85) et Gazole (B7, B10, B30, GNR) pour mobilité moderne et véhicules lourds.",
+    },
+    {
+      icon: Droplet,
+      title: "Combustibles de Chauffage",
+      description:
+        "Fioul domestique, kérosène/jet fuel et GPL (propane, butane) pour usages résidentiels, aviation et industriels.",
+    },
+    {
+      icon: Leaf,
+      title: "Solaire photovoltaïque & thermique",
+      description:
+        "Production d’électricité et chauffage à partir du soleil. Solutions photovoltaïques et thermiques pour particuliers et entreprises.",
     },
     {
       icon: Wind,
-      title: "Énergie Éolienne",
+      title: "Éolien",
       description:
-        "Installation et maintenance de systèmes éoliens adaptés aux besoins locaux, pour collectivités et entreprises.",
-    },
-    {
-      icon: Zap,
-      title: "Recharge Électrique",
-      description:
-        "Stations de recharge rapide pour véhicules électriques. Technologie dernière génération, compatible tous modèles.",
+        "Valorisation des vents pour une énergie propre et continue : études, installation et maintenance de turbines adaptées.",
     },
     {
       icon: Flame,
-      title: "Biogaz",
+      title: "Bioénergie (biodigesteurs, biogaz, biomasse)",
       description:
-        "Production et distribution de biogaz pour énergie domestique et industrielle",
+        "Transformation des déchets organiques en énergie et fertilisants via biodigesteurs, biogaz et valorisation de la biomasse.",
+    },
+    {
+      icon: Droplet,
+      title: "Hydroélectricité",
+      description:
+        "Exploitation des ressources hydriques pour une production locale et fiable d'énergie : petites et moyennes centrales.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Hybridation intelligente",
+      description:
+        "Intégration des renouvelables avec les réseaux existants (microgrids, stockage, contrôle) pour une efficacité maximale.",
     },
     {
       icon: Sparkles,
@@ -95,6 +114,18 @@ export default function Services() {
       title: "Traitement de Déchets",
       description:
         "Unité complète de traitement des déchets plastiques et ménagers avec solutions durables",
+    },
+    {
+      icon: TrendingUp,
+      title: "Produits Industriels",
+      description:
+        "Lubrifiants, solvants, asphalte, coke, combustibles lourds et pétrole lampant pour usages industriels.",
+    },
+    {
+      icon: Sparkles,
+      title: "Produits Pétrochimiques (PP)",
+      description:
+        "Polypropylène (PP) : matériau polyvalent pour emballages, textiles, pièces automobiles et équipements médicaux.",
     },
     {
       icon: Headset,

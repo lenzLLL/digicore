@@ -9,32 +9,25 @@ import {
   Droplet,
   Sparkles,
   TrendingUp,
-  Shield,
-  Clock,
+  Truck,
+  Recycle,
+  Headset,
+  MessageCircle,
+  MapPin,
   Users,
   Award,
-  MapPin,
-  Truck,
-  MessageCircle,
-  Headset,
-  Recycle,
-  Flame,
+  Clock,
+  Shield,
   Wind,
+  Flame,
 } from "lucide-react";
-import ServiceCard from "../components/ServiceCard";
-import ProductCard from "../components/ProductCard";
+import Promo from "../components/Promo";
 import TestimonialCard from "../components/TestimonialCard";
 import FAQSection from "../components/FAQSection";
 import WhatsAppContact from "../components/WhatsAppContact";
 import BlogSection from "../components/BlogSection";
-import Promo from "../components/Promo";
+import ProductCard from "../components/ProductCard";
 
-const heroImage =
-  "https://raw.createusercontent.com/d979799f-e68c-4795-9838-15c0098f6471/";
-const evChargerImage =
-  "https://raw.createusercontent.com/54cd1c2a-59f3-4545-a962-6bdc7b2fd1a9/";
-const oilImage =
-  "https://raw.createusercontent.com/6b48fe65-3ab6-4f4e-8a8d-3aa92bfcaa1c/";
 const carWashImage =
   "https://raw.createusercontent.com/6f7e64de-7812-4733-bf78-e5f94d805ed9/";
 const solarImage =
@@ -43,6 +36,8 @@ const stationInterior =
   "https://raw.createusercontent.com/3f39c044-0768-47e4-bb23-aa1ba0217c9d/";
 const teamImage =
   "https://raw.createusercontent.com/1af55a56-938f-48cc-954b-a7d27089ddc2/";
+const evChargerImage =
+  "https://raw.createusercontent.com/54cd1c2a-59f3-4545-a962-6bdc7b2fd1a9/";
 
 export default function Home() {
   const whatsappNumber = "+23566298696";
@@ -76,6 +71,20 @@ export default function Home() {
       segment: "Énergies Fossiles",
     },
     {
+      icon: Fuel,
+      title: "Carburants Routiers",
+      description:
+        "Essence (SP95, SP98, E10, E85) et Gazole (B7, B10, B30, GNR) pour mobilité et véhicules lourds.",
+      segment: "Énergies Fossiles",
+    },
+    {
+      icon: Droplet,
+      title: "Combustibles de Chauffage",
+      description:
+        "Fioul domestique, kérosène/jet fuel et GPL (propane, butane) pour chauffage, cuisson et usages industriels.",
+      segment: "Énergies Fossiles",
+    },
+    {
       icon: Leaf,
       title: "Énergie Solaire",
       description:
@@ -101,12 +110,26 @@ export default function Home() {
       title: "Biogaz",
       description:
         "Production et distribution de biogaz pour énergie domestique et industrielle",
-      segment: "Énergies Renouvelables",
+      segment: "Services Complémentaires",
     },
     {
       icon: Sparkles,
       title: "Laverie Auto",
       description: "Services de nettoyage automatisé et écologique",
+      segment: "Services Complémentaires",
+    },
+    {
+      icon: TrendingUp,
+      title: "Produits Industriels",
+      description:
+        "Lubrifiants, solvants, asphalte, coke, combustibles lourds et pétrole lampant pour usages industriels.",
+      segment: "Services Complémentaires",
+    },
+    {
+      icon: Sparkles,
+      title: "Produits Pétrochimiques (PP)",
+      description:
+        "Polypropylène (PP) : matière polyvalente pour emballages, textiles, pièces automobiles et équipements médicaux.",
       segment: "Services Complémentaires",
     },
     {
@@ -211,39 +234,41 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#1E5FA8]/20 via-[#1E5FA8]/10 to-transparent opacity-60"></div>
 
         <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
-          <div className="inline-block bg-[#E6C34A] text-[#1E5FA8] px-4 py-1 rounded-full text-xs font-bold mb-4 shadow-lg">
+          <div className="hidden md:inline-block bg-[#E6C34A] text-[#1E5FA8] px-4 py-1 rounded-full text-xs font-bold mb-4 shadow-lg">
             ⚡ Leader de l'énergie au Tchad
           </div>
-          <h1 className="font-bold text-3xl md:text-7xl mb-4 md:mb-6 font-poppins leading-tight">
+          <h1 className="hidden md:block font-bold text-3xl md:text-7xl mb-4 md:mb-6 font-poppins leading-tight">
             EnerTchad S.A
           </h1>
-          <p className="text-base md:text-3xl mb-3 md:mb-4 font-light">
+          <p className="hidden md:block text-base md:text-3xl mb-3 md:mb-4 font-light">
             L'énergie qui fait avancer le Tchad
           </p>
-          <p className="text-sm md:text-lg mb-6 md:mb-10 text-gray-200 max-w-2xl mx-auto">
+          <p className="hidden md:block text-sm md:text-lg mb-6 md:mb-10 text-gray-200 max-w-2xl mx-auto">
             Distribution de carburant, énergies renouvelables, mobilité
             électrique et services automobiles de qualité supérieure
           </p>
-          <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center">
             <a
               href="/services"
-              className="bg-[#E6C34A] text-[#1E5FA8] px-6 py-3 md:px-10 md:py-4 rounded-lg font-bold hover:bg-[#d4a028] transition-all shadow-xl text-sm md:text-lg"
+              aria-label="Découvrir nos services"
+              className="inline-flex items-center justify-center w-[50vw] md:w-auto px-4 py-2 md:px-10 md:py-4 bg-[#E6C34A] text-[#1E5FA8] rounded-lg font-bold hover:bg-[#d4a028] transition-all shadow-xl text-sm md:text-lg"
             >
               Découvrir nos services
             </a>
             <a
               href="/contact"
-              className="border-2 border-white text-white px-6 py-3 md:px-10 md:py-4 rounded-lg font-bold hover:bg-white hover:text-[#1E5FA8] transition-all text-sm md:text-lg"
+              aria-label="Trouver une station"
+              className="inline-flex items-center justify-center w-[50vw] md:w-auto px-4 py-2 md:px-10 md:py-4 border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-[#1E5FA8] transition-all text-sm md:text-lg"
             >
               Trouver une station
             </a>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        {/* Scroll indicator (hidden on mobile) */}
+        <div className="hidden md:block absolute md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20 pointer-events-none">
           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+            <div className="w-1.5 h-3 bg-white rounded-full mt-2"></div>
           </div>
         </div>
       </section>
@@ -291,9 +316,9 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-20 bg-gradient-to-br from-[#F5F9FF] to-white rounded-3xl p-2 lg:p-16">
               <div className="order-2 md:order-1">
                 <div className="inline-block mb-6 px-4 py-2 bg-blue-100 rounded-full">
-                  <span className="text-[#1E5FA8] font-bold text-xs uppercase tracking-widest">⛽ Énergies Fossiles</span>
+                  <span className="text-[#1E5FA8] font-bold text-xs uppercase tracking-widest">⛽ Carburants Premium 24/7</span>
                 </div>
-                <h3 className="text-2xl md:text-6xl font-bold text-[#1E5FA8] mb-6">Carburants Premium 24/7</h3>
+                <h3 className="text-2xl md:text-6xl font-bold text-[#1E5FA8] mb-6">Énergies Fossiles</h3>
                 <p className="text-gray-700 text-xl leading-relaxed">
                   Nous fournissons des carburants de haute qualité, des services de livraison mobile et des solutions d'importation certifiées internationalement. Disponibles partout au Tchad avec un service fiable et professionnel.
                 </p>
@@ -312,15 +337,15 @@ export default function Home() {
                 return (
                   <div 
                     key={idx}
-                    className="group bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#1E5FA8]"
+                    className="group bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#1E5FA8]"
                   >
                     <div className="bg-gradient-to-br from-[#1E5FA8] to-[#164a8a] p-4 rounded-xl w-fit mb-4 md:mb-6 group-hover:shadow-lg transition">
                       <ServiceIcon className="w-6 md:w-8 h-6 md:h-8 text-[#E6C34A]" />
                     </div>
-                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#1E5FA8] transition">
+                    <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#1E5FA8] transition line-clamp-1 md:line-clamp-none">
                       {service.title}
                     </h4>
-                    <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6">
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-2 md:line-clamp-none">
                       {service.description}
                     </p>
                     <a 
@@ -343,11 +368,12 @@ export default function Home() {
               <img src={"/r.png"} alt="Énergies Renouvelables" className="rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
               <div>
                 <div className="inline-block mb-6 px-4 py-2 bg-green-100 rounded-full">
-                  <span className="text-[#3AA655] font-bold text-xs uppercase tracking-widest">🌱 Énergies Renouvelables</span>
+                  <span className="text-[#3AA655] font-bold text-xs uppercase tracking-widest">🌱 Solutions Durables & Écologiques</span>
                 </div>
-                <h3 className="text-2xl md:text-6xl font-bold text-[#3AA655] mb-6">Solutions Durables & Écologiques</h3>
+                <h3 className="text-2xl md:text-6xl font-bold text-[#3AA655] mb-6">Énergies Renouvelables</h3>
                 <p className="text-gray-700 text-xl leading-relaxed">
-                  Transformons le Tchad avec l'énergie solaire, la recharge électrique et le biogaz. Nos solutions respectueuses de l'environnement offrent une indépendance énergétique durable et économique pour les familles et les entreprises.
+                  EnerTchad s’engage à bâtir un avenir énergétique durable, inclusif et innovant.  
+Nous intégrons les énergies renouvelables comme pilier stratégique de la transition énergétique et du développement continental. En réduisant les émissions de CO₂ et en contribuant aux objectifs ESG, nous favorisons l’autonomie énergétique des communautés et des industries, tout en créant de la valeur locale à travers l’emploi, la formation et l’inclusion, grâce à des innovations vertes et des solutions digitales dédiées au suivi et à l’optimisation des performances.
                 </p>
               </div>
             </div>
@@ -363,15 +389,15 @@ export default function Home() {
                 return (
                   <div 
                     key={idx}
-                    className="group bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#3AA655]"
+                    className="group bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#3AA655]"
                   >
                     <div className="bg-gradient-to-br from-[#3AA655] to-[#2d8a45] p-4 rounded-xl w-fit mb-4 md:mb-6 group-hover:shadow-lg transition">
                       <ServiceIcon className="w-6 md:w-8 h-6 md:h-8 text-white" />
                     </div>
-                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#3AA655] transition">
+                    <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#3AA655] transition line-clamp-1 md:line-clamp-none">
                       {service.title}
                     </h4>
-                    <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6">
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-2 md:line-clamp-none">
                       {service.description}
                     </p>
                     <a 
@@ -393,9 +419,9 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-20 bg-gradient-to-br from-[#FEF9E8] to-white rounded-3xl p-2 lg:p-16">
               <div className="order-2 md:order-1">
                 <div className="inline-block mb-6 px-4 py-2 bg-yellow-100 rounded-full">
-                  <span className="text-[#E6C34A] font-bold text-xs uppercase tracking-widest">🛠️ Services Complémentaires</span>
+                  <span className="text-[#E6C34A] font-bold text-xs uppercase tracking-widest">🛠️ Automobile & Environnement</span>
                 </div>
-                <h3 className="text-2xl md:text-6xl font-bold text-[#E6C34A] mb-6">Automobile & Environnement</h3>
+                <h3 className="text-2xl md:text-6xl font-bold text-[#E6C34A] mb-6">Services Complémentaires</h3>
                 <p className="text-gray-700 text-xl leading-relaxed">
                   Complétez votre expérience EnerTchad avec nos services : maintenance automobile professionnelle, laverie écologique haute technologie et gestion responsable des déchets pour un Tchad plus vert.
                 </p>
@@ -414,15 +440,15 @@ export default function Home() {
                 return (
                   <div 
                     key={idx}
-                    className="group bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#E6C34A]"
+                    className="group bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#E6C34A]"
                   >
                     <div className="bg-gradient-to-br from-[#E6C34A] to-[#d4a028] p-4 rounded-xl w-fit mb-4 md:mb-6 group-hover:shadow-lg transition">
                       <ServiceIcon className="w-6 md:w-8 h-6 md:h-8 text-white" />
                     </div>
-                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#E6C34A] transition">
+                    <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#E6C34A] transition line-clamp-1 md:line-clamp-none">
                       {service.title}
                     </h4>
-                    <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6">
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-2 md:line-clamp-none">
                       {service.description}
                     </p>
                     <a 
@@ -453,9 +479,9 @@ export default function Home() {
             <img src={"/h9.webp"} alt="Assistance Technique" className="rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
             <div>
               <div className="inline-block mb-6 px-4 py-2 bg-yellow-100 rounded-full">
-                <span className="text-[#E6C34A] font-bold text-xs uppercase tracking-widest">📞 Assistance Technique 24/7</span>
+                <span className="text-[#E6C34A] font-bold text-xs uppercase tracking-widest">📞 Support Réactif & Professionnel</span>
               </div>
-              <h2 className="text-3xl md:text-6xl font-bold text-[#E6C34A] mb-6">Support Réactif & Professionnel</h2>
+              <h2 className="text-3xl md:text-6xl font-bold text-[#E6C34A] mb-6">Assistance Technique 24/7</h2>
               <p className="text-gray-700 text-xl leading-relaxed mb-8">
                 EnerTchad est là pour vous 24 heures sur 24, 7 jours sur 7. Notre équipe technique qualifiée résout vos problèmes rapidement avec des solutions efficaces et un suivi personnalisé. Contactez-nous par téléphone, WhatsApp, email ou visitez nos stations.
               </p>
@@ -496,7 +522,7 @@ export default function Home() {
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-16">
-            <div className="bg-white rounded-2xl p-4 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <div className="bg-white rounded-2xl p-3 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-gradient-to-br from-[#E6C34A] to-[#d4a028] rounded-xl flex items-center justify-center mb-6">
                 <Clock className="w-7 h-7 text-white" />
               </div>
@@ -506,7 +532,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-4 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <div className="bg-white rounded-2xl p-3 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-gradient-to-br from-[#E6C34A] to-[#d4a028] rounded-xl flex items-center justify-center mb-6">
                 <Award className="w-7 h-7 text-white" />
               </div>
@@ -516,7 +542,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-4 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <div className="bg-white rounded-2xl p-3 md:p-10 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="w-14 h-14 bg-gradient-to-br from-[#E6C34A] to-[#d4a028] rounded-xl flex items-center justify-center mb-6">
                 <Shield className="w-7 h-7 text-white" />
               </div>
@@ -539,7 +565,7 @@ export default function Home() {
                 alt="Station moderne"
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-[#E6C34A] p-3 md:p-6 rounded-xl shadow-xl w-24 md:w-auto">
+              <div className="hidden md:block absolute -bottom-6 -right-6 bg-[#E6C34A] p-3 md:p-6 rounded-xl shadow-xl w-24 md:w-auto">
                 <div className="text-2xl md:text-4xl font-bold text-[#1E5FA8]">15+</div>
                 <div className="text-xs md:text-sm text-[#1E5FA8] font-semibold leading-tight">
                   Années d'excellence
