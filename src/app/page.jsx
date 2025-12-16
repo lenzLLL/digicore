@@ -153,6 +153,94 @@ export default function Home() {
         "Support technique 24/7 pour tous vos questions et problèmes",
       segment: "Services Complémentaires",
     },
+    {
+      icon: Leaf,
+      title: "Biomasse solide",
+      description:
+        "Valorisation des résidus agricoles et forestiers en combustibles et granulés pour la production d'énergie locale.",
+      segment: "Bioénergies",
+    },
+    {
+      icon: Flame,
+      title: "Biogaz",
+      description:
+        "Conception et mise en place de digesteurs pour la production de méthane à partir de déchets organiques.",
+      segment: "Bioénergies",
+    },
+    {
+      icon: Droplet,
+      title: "Biocarburants liquides",
+      description:
+        "Production et distribution de biodiesel et bioéthanol à partir de ressources agricoles locales.",
+      segment: "Bioénergies",
+    },
+    {
+      icon: Zap,
+      title: "Biohydrogène & Gaz de synthèse",
+      description:
+        "Solutions de production d'hydrogène et gaz synthétiques issus de la biomasse pour usages industriels et mobilité.",
+      segment: "Bioénergies",
+    },
+  ];
+
+  const lubricantItems = [
+    {
+      icon: Droplet,
+      title: "Huiles Moteur",
+      description: "Huiles minérales, semi-synthétiques et synthétiques premium pour moteurs essence et diesel (conformes SAE, API, ACEA).",
+      gradientClass: "from-[#E6C34A] to-[#d4a028]",
+    },
+    {
+      icon: Wrench,
+      title: "Huiles de Transmission",
+      description: "Boîtes manuelles, transmissions automatiques (ATF) et huiles pour ponts et engrenages (extrême pression).",
+      gradientClass: "from-[#E6C34A] to-[#d4a028]",
+    },
+    {
+      icon: Sparkles,
+      title: "Graisses Industrielles",
+      description: "Graisses au lithium/calcium, graisses au molybdène (MoS2) et graisses haute température pour paliers et engrenages.",
+      gradientClass: "from-[#E6C34A] to-[#d4a028]",
+    },
+    {
+      icon: Droplet,
+      title: "Fluides Hydrauliques",
+      description: "Huiles hydrauliques minérales, fluides synthétiques et fluides biodégradables pour systèmes hydrauliques.",
+      gradientClass: "from-[#E6C34A] to-[#d4a028]",
+    },
+    {
+      icon: Sparkles,
+      title: "Lubrifiants Spécialisés",
+      description: "Huiles de coupe et usinage, lubrifiants pour compresseurs, turbines et antigels/liquides de refroidissement.",
+      gradientClass: "from-[#E6C34A] to-[#d4a028]",
+    },
+  ];
+
+  const fieldItems = [
+    {
+      icon: Fuel,
+      title: "Forage & Complétion",
+      description: "Forage directionnel & horizontal, cimentation intelligente et acquisition de données en temps réel.",
+      gradientClass: "from-[#1E5FA8] to-[#164a8a]",
+    },
+    {
+      icon: Zap,
+      title: "Production & Optimisation",
+      description: "Systèmes de levage artificiel (ESP, Gas Lift, Rod Pump), gestion des flux multiphasiques et optimisation prédictive.",
+      gradientClass: "from-[#1E5FA8] to-[#164a8a]",
+    },
+    {
+      icon: Wrench,
+      title: "Ingénierie & Maintenance",
+      description: "Stimulation hydraulique (fracturation), intervention sur puits et maintenance prédictive conforme HSE.",
+      gradientClass: "from-[#1E5FA8] to-[#164a8a]",
+    },
+    {
+      icon: Wind,
+      title: "Offshore & Subsea",
+      description: "Ingénierie sous-marine (SURF), inspection et monitoring de pipelines, precommissioning & decommissioning sécurisé.",
+      gradientClass: "from-[#1E5FA8] to-[#164a8a]",
+    },
   ];
 
   const [products, setProducts] = useState([]);
@@ -414,7 +502,161 @@ Nous intégrons les énergies renouvelables comme pilier stratégique de la tran
           </div>
 
           {/* Services Complémentaires Segment */}
-          <div className="mb-16">
+       
+
+              {/* Bioénergies Segment (copied structure from other segments) */}
+              <div className="mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-20 bg-gradient-to-br from-[#F0F8E8] to-white rounded-3xl p-2 lg:p-16">
+                  <img src={"/b.png"} alt="Bioénergies" className="order-1 md:order-2 rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
+                  <div className="order-2 md:order-1">
+                    <div className="inline-block mb-6 px-4 py-2 bg-green-100 rounded-full">
+                      <span className="text-[#3AA655] font-bold text-xs uppercase tracking-widest">🔥 Bioénergies</span>
+                    </div>
+                    <h3 className="text-2xl md:text-6xl font-bold text-[#3AA655] mb-6">Bioénergies</h3>
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      Valorisation de la biomasse et production d'énergies renouvelables : biomasse solide, biogaz, biocarburants et solutions de biohydrogène adaptées aux territoires.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-3 mb-8">
+                  <Leaf className="w-8 h-8 text-[#3AA655]" />
+                  <h3 className="text-2xl font-bold text-[#3AA655]">Nos Services</h3>
+                  <div className="flex-1 h-1 bg-gradient-to-r from-[#3AA655] to-transparent rounded-full"></div>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-6">
+                  {services.filter(s => s.segment === "Bioénergies").map((service, idx) => {
+                    const ServiceIcon = service.icon;
+                    return (
+                      <div 
+                        key={idx}
+                        className="group bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#3AA655]"
+                      >
+                        <div className="bg-gradient-to-br from-[#3AA655] to-[#2d8a45] p-4 rounded-xl w-fit mb-4 md:mb-6 group-hover:shadow-lg transition">
+                          <ServiceIcon className="w-6 md:w-8 h-6 md:h-8 text-white" />
+                        </div>
+                        <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#3AA655] transition line-clamp-1 md:line-clamp-none">
+                          {service.title}
+                        </h4>
+                        <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-2 md:line-clamp-none">
+                          {service.description}
+                        </p>
+                        <a 
+                          href="/services"
+                          className="inline-flex items-center space-x-2 text-[#3AA655] font-bold text-sm md:text-base group-hover:text-[#1E5FA8] transition"
+                        >
+                          <span>En savoir plus</span>
+                          <span className="transform group-hover:translate-x-1 transition">→</span>
+                        </a>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Lubrifiants Segment (structured like other segments) */}
+              <div className="mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-20 bg-gradient-to-br from-[#FFF8F0] to-white rounded-3xl p-2 lg:p-16">
+                  <div className="order-2 md:order-1">
+                    <div className="inline-block mb-6 px-4 py-2 bg-yellow-100 rounded-full">
+                      <span className="text-[#E6C34A] font-bold text-xs uppercase tracking-widest">🛢️ Lubrifiants</span>
+                    </div>
+                    <h3 className="text-2xl md:text-6xl font-bold text-[#E6C34A] mb-6">Lubrifiants</h3>
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      Gamme complète de lubrifiants pour véhicules, industrie et applications spécialisées — formulés pour la performance, la protection et la durabilité.
+                    </p>
+                  </div>
+                  <img src={"/l.png"} alt="Lubrifiants" className="order-1 md:order-2 rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
+                </div>
+
+                <div className="flex items-center space-x-3 mb-8">
+                  <Wrench className="w-8 h-8 text-[#E6C34A]" />
+                  <h3 className="text-2xl font-bold text-[#E6C34A]">Nos Produits Lubrifiants</h3>
+                  <div className="flex-1 h-1 bg-gradient-to-r from-[#E6C34A] to-transparent rounded-full"></div>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-6 mb-6">
+                  {lubricantItems.map((service, idx) => {
+                    const ServiceIcon = service.icon;
+                    return (
+                      <div 
+                        key={idx}
+                        className="group bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#E6C34A]"
+                      >
+                        <div className={`bg-gradient-to-br ${service.gradientClass} p-4 rounded-xl w-fit mb-4 md:mb-6 group-hover:shadow-lg transition`}>
+                          <ServiceIcon className="w-6 md:w-8 h-6 md:h-8 text-white" />
+                        </div>
+                        <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#E6C34A] transition line-clamp-1 md:line-clamp-none">
+                          {service.title}
+                        </h4>
+                        <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-2 md:line-clamp-none">
+                          {service.description}
+                        </p>
+                        <a 
+                          href="/services"
+                          className="inline-flex items-center space-x-2 text-[#E6C34A] font-bold text-sm md:text-base group-hover:text-[#1E5FA8] transition"
+                        >
+                          <span>En savoir plus</span>
+                          <span className="transform group-hover:translate-x-1 transition">→</span>
+                        </a>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Services de Champs Pétroliers Segment */}
+              <div className="mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-20 bg-gradient-to-br from-[#F7F8FF] to-white rounded-3xl p-2 lg:p-16">
+                  <div className="order-2 md:order-1">
+                    <div className="inline-block mb-6 px-4 py-2 bg-blue-100 rounded-full">
+                      <span className="text-[#1E5FA8] font-bold text-xs uppercase tracking-widest">⛏ Forage & Production</span>
+                    </div>
+                    <h3 className="text-2xl md:text-6xl font-bold text-[#1E5FA8] mb-6">Services de Champs Pétroliers</h3>
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      Expertise complète pour le développement, la production et la maintenance des champs pétroliers onshore et offshore.
+                    </p>
+                  </div>
+                  <img src={"/p.png"} alt="Champs pétroliers" className="order-1 md:order-2 rounded-3xl shadow-2xl w-full h-64 md:h-[500px] object-cover" />
+                </div>
+
+                <div className="flex items-center space-x-3 mb-8">
+                  <Fuel className="w-8 h-8 text-[#1E5FA8]" />
+                  <h3 className="text-2xl font-bold text-[#1E5FA8]">Nos Services</h3>
+                  <div className="flex-1 h-1 bg-gradient-to-r from-[#1E5FA8] to-transparent rounded-full"></div>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-2 gap-1.5 md:gap-6 mb-6">
+                  {fieldItems.map((service, idx) => {
+                    const ServiceIcon = service.icon;
+                    return (
+                      <div 
+                        key={idx}
+                        className="group bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 hover:border-[#1E5FA8]"
+                      >
+                        <div className={`bg-gradient-to-br ${service.gradientClass} p-4 rounded-xl w-fit mb-4 md:mb-6 group-hover:shadow-lg transition`}>
+                          <ServiceIcon className="w-6 md:w-8 h-6 md:h-8 text-white" />
+                        </div>
+                        <h4 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-[#1E5FA8] transition line-clamp-1 md:line-clamp-none">
+                          {service.title}
+                        </h4>
+                        <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-2 md:line-clamp-none">
+                          {service.description}
+                        </p>
+                        <a 
+                          href="/services"
+                          className="inline-flex items-center space-x-2 text-[#1E5FA8] font-bold text-sm md:text-base group-hover:text-[#E6C34A] transition"
+                        >
+                          <span>En savoir plus</span>
+                          <span className="transform group-hover:translate-x-1 transition">→</span>
+                        </a>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+                  <div className="mb-16">
             {/* Intro avec image */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-center mb-20 bg-gradient-to-br from-[#FEF9E8] to-white rounded-3xl p-2 lg:p-16">
               <div className="order-2 md:order-1">
@@ -463,8 +705,7 @@ Nous intégrons les énergies renouvelables comme pilier stratégique de la tran
               })}
             </div>
           </div>
-
-          {/* CTA avec WhatsApp */}
+              {/* CTA avec WhatsApp */}
         
 
     
